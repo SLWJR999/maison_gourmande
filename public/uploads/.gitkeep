@@ -1,0 +1,2 @@
+# Les médias téléversés depuis l'admin sont stockés ici en développement.
+# En production, utilisez un stockage objet sécurisé (S3, R2, Supabase Storage…).
