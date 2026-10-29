@@ -154,7 +154,7 @@ export default async function MenuPage({
             </div>
           </div>
 
-          <div className="no-scrollbar mt-9 flex gap-2 overflow-x-auto border-t border-brown/10 pt-6">
+          <div className="no-scrollbar mt-9 hidden sm:block flex gap-2 overflow-x-auto border-t border-brown/10 pt-6">
             {menu.categories.map((category) => (
               <Link
                 key={category.id}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useMemo, useState } from "react";
+import Link from "next/link";
 import {
   BadgePercent,
   ChefHat,
