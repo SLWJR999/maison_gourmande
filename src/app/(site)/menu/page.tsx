@@ -5,7 +5,6 @@ import { getActiveBanners, getActivePromotions, getMenuData } from "@/lib/catalo
 import { getCachedSettings } from "@/lib/settings";
 import { MenuExplorer } from "@/components/menu/menu-explorer";
 import { MediaImage } from "@/components/ui/media-image";
-import { Reveal } from "@/components/ui/reveal";
 import { CategoryIcon } from "@/components/site/category-icon";
 import { formatFCFA } from "@/lib/utils";
 
@@ -154,7 +153,7 @@ export default async function MenuPage({
             </div>
           </div>
 
-          <div className="no-scrollbar mt-9 hidden sm:block flex gap-2 overflow-x-auto border-t border-brown/10 pt-6">
+          <div className="no-scrollbar mt-9 hidden gap-2 sm:flex overflow-x-auto border-t border-brown/10 pt-6">
             {menu.categories.map((category) => (
               <Link
                 key={category.id}
@@ -173,19 +172,17 @@ export default async function MenuPage({
 
       <section className="pt-4 sm:pt-6">
         <div className="container-page">
-          <Reveal>
-            <MenuExplorer
-              categories={menu.categories}
-              products={menu.products}
-              initialCategory={params.categorie ?? ""}
-              promotionScope={{
-                all: promotedAll,
-                categoryIds: promotedCategoryIds,
-                productIds: promotedProductIds,
-              }}
-              hasPromotions={promotions.length > 0}
-            />
-          </Reveal>
+          <MenuExplorer
+            categories={menu.categories}
+            products={menu.products}
+            initialCategory={params.categorie ?? ""}
+            promotionScope={{
+              all: promotedAll,
+              categoryIds: promotedCategoryIds,
+              productIds: promotedProductIds,
+            }}
+            hasPromotions={promotions.length > 0}
+          />
         </div>
       </section>
 
