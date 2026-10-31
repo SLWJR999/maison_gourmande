@@ -110,11 +110,11 @@ const CATEGORIES = [
   {
     name: "Pâtisserie",
     slug: "patisserie",
-    description: "Une nouvelle vitrine de douceurs arrive bientôt.",
+    description: "Gâteaux d'anniversaire et douceurs maison.",
     imageUrl: "/images/pastry.jpg",
     icon: "Cookie",
     sortOrder: 7,
-    isActive: false,
+    isActive: true,
   },
 ];
 
@@ -662,6 +662,38 @@ const PRODUCTS: ProductSeed[] = [
     variants: [
       { name: "50 cl", quantity: 1, price: 1500, composition: "50 cl" },
       { name: "1 L", quantity: 1, price: 2500, composition: "1 litre" },
+    ],
+  },
+  {
+    name: "Gâteau d'anniversaire",
+    slug: "gateau-anniversaire",
+    category: "patisserie",
+    shortDescription: "Le gâteau fait maison qui rend la fête encore plus belle.",
+    description:
+      "Un gâteau moelleux, préparé à la commande et décoré avec soin pour célébrer vos anniversaires et vos moments de partage. Choisissez le format selon le nombre d'invités. Pensez à commander au moins 24 h à l'avance.",
+    imageUrl: "/images/pastry.jpg",
+    images: ["/images/pastry.jpg"],
+    badge: "Sur commande",
+    costPrice: 0,
+    sortOrder: 40,
+    variants: [
+      { name: "8 parts", quantity: 1, price: 8000, composition: "1 gâteau d'anniversaire · 8 parts" },
+      { name: "10 parts", quantity: 1, price: 10000, composition: "1 gâteau d'anniversaire · 10 parts" },
+    ],
+  },
+  {
+    name: "Khérou Touba",
+    slug: "kherou-touba",
+    category: "patisserie",
+    shortDescription: "La douceur traditionnelle de Touba, en sachet à partager.",
+    description:
+      "Le Khérou Touba, petite gourmandise sénégalaise croquante et parfumée, vendu en sachet de 10 pièces. À grignoter à tout moment ou à offrir.",
+    imageUrl: "/images/pastry.jpg",
+    images: ["/images/pastry.jpg"],
+    costPrice: 0,
+    sortOrder: 41,
+    variants: [
+      { name: "Sachet de 10", quantity: 10, price: 500, composition: "1 sachet de 10 pièces" },
     ],
   },
 ];
